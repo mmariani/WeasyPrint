@@ -200,9 +200,9 @@ def dlopen(ffi, *names):
     return ffi.dlopen(names[0])  # pragma: no cover
 
 
-gobject = dlopen(ffi, 'gobject-2.0', 'libgobject-2.0-0')
-pango = dlopen(ffi, 'pango-1.0', 'libpango-1.0-0')
-pangocairo = dlopen(ffi, 'pangocairo-1.0', 'libpangocairo-1.0-0')
+gobject = dlopen(ffi, 'gobject-2.0', 'libgobject-2.0-0', 'libgobject-2.0.so')
+pango = dlopen(ffi, 'pango-1.0', 'libpango-1.0-0', 'libpango-1.0.so')
+pangocairo = dlopen(ffi, 'pangocairo-1.0', 'libpangocairo-1.0-0', 'libpangocairo-1.0.so')
 
 gobject.g_type_init()
 
